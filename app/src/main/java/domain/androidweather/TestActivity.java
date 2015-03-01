@@ -1,6 +1,9 @@
 package domain.androidweather;
 
 import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.os.AsyncTask;
 import domain.androidweather.weatherService.models.Weather;
@@ -12,6 +15,9 @@ import java.lang.Void;
 
 public class TestActivity extends Activity{
 
+    TextView textView;
+    TextView textView1;
+    TextView textView2;
 
     IWeatherService service;
     Weather info;
@@ -22,9 +28,9 @@ public class TestActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.testactivity);
 
-        TextView textView = (TextView) findViewById(R.id.test);
-        TextView textView1 = (TextView) findViewById(R.id.test1);
-        TextView textView2 = (TextView) findViewById(R.id.test2);
+        textView = (TextView) findViewById(R.id.test);
+        textView1 = (TextView) findViewById(R.id.test1);
+        textView2 = (TextView) findViewById(R.id.test2);
 
         Button btn = (Button)findViewById(R.id.btnInfo);
         btn.setOnClickListener(new View.OnClickListener() {
