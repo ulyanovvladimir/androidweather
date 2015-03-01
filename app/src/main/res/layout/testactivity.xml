@@ -4,32 +4,27 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
+
     <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Показать информацию"
-        android:id = "@+id/btnInfo"
-        />
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Show info"
+            android:id = "@+id/btnInfo"
+            />
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id = "@+id/test"
-        />
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id = "@+id/test"
+            />
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id = "@+id/test1"
-        />
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id = "@+id/test1"
+            />
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id = "@+id/test2"
-        />
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Настройки"
-        android:id = "@+id/btnSettings"
-        />
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id = "@+id/test2"
+            />
 
 </LinearLayout>

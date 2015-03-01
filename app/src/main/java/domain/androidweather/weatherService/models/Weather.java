@@ -9,5 +9,4 @@ public class Weather {
     public Coord coord;
     public List<WeatherDesc> weather;
     public Sys sys;
-    public Wind wind;
 }
