@@ -1,5 +1,6 @@
 package domain.androidweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -57,6 +58,9 @@ public class SettingsActivity extends ActionBarActivity {
 
     public void onSaveButtonClick(View v) {
         String townValue = textField.getText().toString();
+        Intent intent = new Intent(SettingsActivity.this, TestActivity.class);
+        intent.putExtra("Town", townValue);
+        startActivity(intent);
         saveSettings(new Pair<>("Town", townValue));
         Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
     }

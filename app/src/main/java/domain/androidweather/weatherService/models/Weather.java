@@ -8,4 +8,6 @@ public class Weather {
     public int cod;
     public Coord coord;
     public List<WeatherDesc> weather;
+    public Sys sys;
+    public Wind wind;
 }
