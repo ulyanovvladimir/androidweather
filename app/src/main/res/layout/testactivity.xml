@@ -8,7 +8,7 @@
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Show info"
+            android:text="Показать информацию"
             android:id = "@+id/btnInfo"
             />
     <TextView
@@ -26,5 +26,10 @@
             android:layout_height="wrap_content"
             android:id = "@+id/test2"
             />
-
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Настройки"
+        android:id = "@+id/btnSettings"
+        />
 </LinearLayout>
