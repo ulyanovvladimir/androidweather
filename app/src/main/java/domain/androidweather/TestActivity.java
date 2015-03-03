@@ -81,27 +81,27 @@ public class TestActivity extends Activity{
                         case "Clouds":
                             if(weathers.description.equals("scattered clouds"))
                             {
-                                textInfo = "В городе облачно и разорванные облака";
+                                textInfo = "В городе небольшая облачность";
                                 textView1.setText(textInfo);
                             }
                             else if(weathers.description.equals("clear sky"))
                             {
-                                textInfo = "В городе чистое небо";
+                                textInfo = "В городе ясная погода";
                                 textView1.setText(textInfo);
                             }
                             else if(weathers.description.equals("few clouds"))
                             {
-                                textInfo = "В городе небольшая облачность";
+                                textInfo = "В городе малооблачная погода";
                                 textView1.setText(textInfo);
                             }
                             else if(weathers.description.equals("broken clouds"))
                             {
-                                textInfo = "В городе облачно и разорванные облака";
+                                textInfo = "В городе переменная облачность";
                                 textView1.setText(textInfo);
                             }
                             else if(weathers.description.equals("overcast clouds"))
                             {
-                                textInfo = "В городе облачно и пасмурные облака";
+                                textInfo = "В городе пасмурная погода";
                                 textView1.setText(textInfo);
                             }
                             break;
