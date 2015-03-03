@@ -1,8 +1,12 @@
 package domain.androidweather.weatherService;
 
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import domain.androidweather.weatherService.models.Weather;
 import retrofit.RestAdapter;
+import retrofit.converter.GsonConverter;
 
 public class OpenWeatherService implements IWeatherService {
 
@@ -10,7 +14,11 @@ public class OpenWeatherService implements IWeatherService {
     private String API_ENDPOINT = "http://api.openweathermap.org";
 
     public OpenWeatherService() {
-        RestAdapter adapter = new RestAdapter.Builder().setEndpoint(API_ENDPOINT).build();
+
+
+        RestAdapter adapter = new RestAdapter.Builder()
+                .setEndpoint(API_ENDPOINT)
+                .build();
 
         service = adapter.create(IOpenWeatherService.class);
     }

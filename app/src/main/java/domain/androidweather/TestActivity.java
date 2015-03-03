@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.os.AsyncTask;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import domain.androidweather.weatherService.models.Weather;
 import domain.androidweather.weatherService.IWeatherService;
 import domain.androidweather.weatherService.OpenWeatherService;
@@ -23,6 +27,10 @@ public class TestActivity extends Activity{
     IWeatherService service;
     Weather info;
     ServiceTask serviceTask;
+
+    enum Sky{
+        Clouds;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,12 +76,44 @@ public class TestActivity extends Activity{
                 super.onPostExecute(result);
                 textView.setText("City " + info.name + "  Country: " + info.sys.country);
                 for(WeatherDesc weathers : info.weather){
-                    textView1.setText("Description: " + weathers.description + "   Main: " + weathers.main);
-                }
+                    String textInfo;
+                    switch (weathers.main){
+                        case "Clouds":
+                            if(weathers.description.equals("scattered clouds"))
+                            {
+                                textInfo = "В городе облачно и разорванные облака";
+                                textView1.setText(textInfo);
+                            }
+                            else if(weathers.description.equals("clear sky"))
+                            {
+                                textInfo = "В городе чистое небо";
+                                textView1.setText(textInfo);
+                            }
+                            else if(weathers.description.equals("few clouds"))
+                            {
+                                textInfo = "В городе небольшая облачность";
+                                textView1.setText(textInfo);
+                            }
+                            else if(weathers.description.equals("broken clouds"))
+                            {
+                                textInfo = "В городе облачно и разорванные облака";
+                                textView1.setText(textInfo);
+                            }
+                            else if(weathers.description.equals("overcast clouds"))
+                            {
+                                textInfo = "В городе облачно и пасмурные облака";
+                                textView1.setText(textInfo);
+                            }
+                            break;
+                    }
+
+                    }
+
                 textView2.setText("Wind speed: " + info.wind.speed);
+                }
+
             }
         }
 
 
 
-}
