@@ -78,9 +78,7 @@ public class TestActivity extends Activity{
                 textView.setText("City " + test + "  Country: " + info.sys.country);
                 Dictionary dictionary = new Dictionary();
                 for (WeatherDesc weathers : info.weather) {
-                    String desc = weathers.description;
-                    String mai = weathers.main;
-                    dictionary.Cloud(desc,mai);
+                    dictionary.Cloud(weathers.description,weathers.main);
                     textView1.setText(dictionary.textInfo);
                 }
 
