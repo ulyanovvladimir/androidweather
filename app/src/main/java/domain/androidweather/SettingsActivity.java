@@ -30,6 +30,7 @@ public class SettingsActivity extends ActionBarActivity {
         if(preferences.contains("Town")) {
             textField.setText(preferences.getString("Town", null));
         }
+
     }
 
 
@@ -68,4 +69,7 @@ public class SettingsActivity extends ActionBarActivity {
     public void saveSettings(Pair<String, String> settings) {
         preferences.edit().putString(settings.first, settings.second).apply();
     }
+
+
+
 }

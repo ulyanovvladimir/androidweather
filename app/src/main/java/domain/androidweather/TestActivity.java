@@ -74,40 +74,15 @@ public class TestActivity extends Activity{
             @Override
             protected void onPostExecute(Void result) {
                 super.onPostExecute(result);
-                textView.setText("City " + info.name + "  Country: " + info.sys.country);
-                for(WeatherDesc weathers : info.weather){
-                    String textInfo;
-                    switch (weathers.main){
-                        case "Clouds":
-                            if(weathers.description.equals("scattered clouds"))
-                            {
-                                textInfo = "В городе небольшая облачность";
-                                textView1.setText(textInfo);
-                            }
-                            else if(weathers.description.equals("clear sky"))
-                            {
-                                textInfo = "В городе ясная погода";
-                                textView1.setText(textInfo);
-                            }
-                            else if(weathers.description.equals("few clouds"))
-                            {
-                                textInfo = "В городе малооблачная погода";
-                                textView1.setText(textInfo);
-                            }
-                            else if(weathers.description.equals("broken clouds"))
-                            {
-                                textInfo = "В городе переменная облачность";
-                                textView1.setText(textInfo);
-                            }
-                            else if(weathers.description.equals("overcast clouds"))
-                            {
-                                textInfo = "В городе пасмурная погода";
-                                textView1.setText(textInfo);
-                            }
-                            break;
-                    }
-
-                    }
+                String test = info.name;
+                textView.setText("City " + test + "  Country: " + info.sys.country);
+                Dictionary dictionary = new Dictionary();
+                for (WeatherDesc weathers : info.weather) {
+                    String desc = weathers.description;
+                    String mai = weathers.main;
+                    dictionary.Cloud(desc,mai);
+                    textView1.setText(dictionary.textInfo);
+                }
 
                 textView2.setText("Wind speed: " + info.wind.speed);
                 }
