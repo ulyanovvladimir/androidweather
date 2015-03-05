@@ -5,5 +5,27 @@
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="owm_200">thunderrstorm with light rain</string>
+    <string name="owm_201">thunderstorm with rain</string>
+    <string name="owm_202">thunderstorm with heavy rain</string>
+    <string name="owm_210">light thunderstorm</string>
+    <string name="owm_211">thunderstorm</string>
+    <string name="owm_212">heavy thunderstorm</string>
+    <string name="owm_221">ragged thunderstorm</string>
+    <string name="owm_230">thunderstorm with light drizzle</string>
+    <string name="owm_231">thunderstorm with drizzle</string>
+    <string name="owm_232">thunderstorm with heavy drizzle</string>
+    <string name="owm_300">light intensity drizzle</string>
+    <string name="owm_301">drizzle</string>
+    <string name="owm_302">heavy intensity drizzle</string>
+    <string name="owm_310">light intensity drizzle rain</string>
+    <string name="owm_311">drizzle rain</string>
+    <string name="owm_312">heavy intensity drizzle rain</string>
+    <string name="owm_313">shower rain and drizzle</string>
+    <string name="owm_314">heavy shower rain and drizzle</string>
+    <string name="owm_321">shower drizzle</string>
+    <string name="owm_500">light rain</string>
+    <string name="owm_701">mist</string>
+    <string name="owm_711">smoke</string>
 
 </resources>

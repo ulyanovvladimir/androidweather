@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">androidweather</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    /*Weather Codes*/
+
+    //Thunderstorm
+    <string name="owm_200">гроза и небольшой дождь</string>
+    <string name="owm_201">гроза с дождем</string>
+    <string name="owm_202">гроза с сильным дождем</string>
+    <string name="owm_212">сильная гроза</string>
+    <string name="owm_221"></string>
+    <string name="owm_230">гроза и легкий, моросящий дождь</string>
+    <string name="owm_231">гроза и моросящий дождь</string>
+    <string name="owm_232">гроза и сильный, моросящий дождь</string>
+
+
+    //Drizzle
+    <string name="owm_300">легкий, моросящий дождь</string>
+    <string name="owm_301">моросящий дождь</string>
+    <string name="owm_302">сильный, моросящий дождь</string>
+    <string name="owm_310">легкий, моросящий дождь</string>
+    <string name="owm_311">моросящий дождь</string>
+    <string name="owm_312">сильный, моросящий дождь</string>
+    <string name="owm_313">ливень и...?</string>
+    <string name="owm_314">сильный ливен и...?</string>
+
+    //Rain
+    <string name="owm_500"></string>
+    <string name="owm_501"></string>
+    <string name="owm_502"></string>
+    <string name="owm_503"></string>
+    <string name="owm_504"></string>
+    <string name="owm_511"></string>
+    <string name="owm_520"></string>
+    <string name="owm_521"></string>
+    <string name="owm_522"></string>
+    <string name="owm_531"></string>
+
+    //Snow
+    <string name="owm_600"></string>
+    <string name="owm_601"></string>
+    <string name="owm_602"></string>
+    <string name="owm_611"></string>
+    <string name="owm_612"></string>
+    <string name="owm_615"></string>
+    <string name="owm_616"></string>
+    <string name="owm_620"></string>
+    <string name="owm_621"></string>
+    <string name="owm_622"></string>
+
+    //Atmosphere
+    <string name="owm_701">дымка</string>
+    <string name="owm_711">туман</string>
+    <string name="owm_721"></string>
+    <string name="owm_731"></string>
+    <string name="owm_741"></string>
+    <string name="owm_751"></string>
+    <string name="owm_761"></string>
+    <string name="owm_762"></string>
+    <string name="owm_771"></string>
+    <string name="owm_781"></string>
+
+
+    //Clouds
+    <string name="owm_800"></string>
+    <string name="owm_801"></string>
+    <string name="owm_802"></string>
+    <string name="owm_803"></string>
+    <string name="owm_804"></string>
+
+    //Extreme
+    <string name="owm_900"></string>
+    <string name="owm_901"></string>
+    <string name="owm_902"></string>
+    <string name="owm_903"></string>
+    <string name="owm_904"></string>
+    <string name="owm_905"></string>
+    <string name="owm_906"></string>
+
+    //Additional
+    <string name="owm_951"></string>
+    <string name="owm_952"></string>
+    <string name="owm_953"></string>
+    <string name="owm_954"></string>
+    <string name="owm_955"></string>
+    <string name="owm_956"></string>
+    <string name="owm_957"></string>
+    <string name="owm_958"></string>
+    <string name="owm_959"></string>
+    <string name="owm_960"></string>
+    <string name="owm_961"></string>
+    <string name="owm_962"></string>
+    <string name="owm_210">небольшая гроза</string>
+    <string name="owm_211">гроза</string>
+    <string name="owm_321">ливневый, моросящий дождь ?</string>
+</resources>

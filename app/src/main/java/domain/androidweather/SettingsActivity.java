@@ -23,12 +23,12 @@ public class SettingsActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        preferences = getPreferences(MODE_PRIVATE);
+        preferences = getSharedPreferences("AndroidWeather", MODE_PRIVATE);
 
         textField = (EditText)findViewById(R.id.settings_town);
 
-        if(preferences.contains("Town")) {
-            textField.setText(preferences.getString("Town", null));
+        if(preferences.contains("City")) {
+            textField.setText(preferences.getString("City", null));
         }
 
     }
@@ -58,12 +58,17 @@ public class SettingsActivity extends ActionBarActivity {
 
 
     public void onSaveButtonClick(View v) {
-        String townValue = textField.getText().toString();
-        Intent intent = new Intent(SettingsActivity.this, TestActivity.class);
-        intent.putExtra("Town", townValue);
-        startActivity(intent);
-        saveSettings(new Pair<>("Town", townValue));
+        String city = textField.getText().toString();
+        /*Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
+        intent.putExtra("City", townValue);
+        startActivity(intent);*/
+        saveSettings(new Pair<>("City", city));
         Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
+    }
+
+    public void onReturnButtonClick(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void saveSettings(Pair<String, String> settings) {

@@ -8,5 +8,5 @@ import retrofit.http.Query;
 interface IOpenWeatherService {
 
     @GET("/data/2.5/weather")
-    Weather getCityWeather(@Query("q") String town);
+    Weather getCityWeather(@Query("q") String town, @Query("units") String units);
 }

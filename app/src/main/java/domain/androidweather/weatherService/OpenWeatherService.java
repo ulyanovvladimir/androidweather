@@ -1,21 +1,19 @@
 package domain.androidweather.weatherService;
 
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import android.content.Context;
 
 import domain.androidweather.weatherService.models.Weather;
 import retrofit.RestAdapter;
-import retrofit.converter.GsonConverter;
 
 public class OpenWeatherService implements IWeatherService {
 
     private IOpenWeatherService service;
-    private String API_ENDPOINT = "http://api.openweathermap.org";
+    private ITranslator<Weather> translator;
+    private final String API_ENDPOINT = "http://api.openweathermap.org";
+    private final String API_UNITS = "metric";
 
     public OpenWeatherService() {
-
-
         RestAdapter adapter = new RestAdapter.Builder()
                 .setEndpoint(API_ENDPOINT)
                 .build();
@@ -23,8 +21,23 @@ public class OpenWeatherService implements IWeatherService {
         service = adapter.create(IOpenWeatherService.class);
     }
 
+    public OpenWeatherService(Context applicationContext) {
+        RestAdapter adapter = new RestAdapter.Builder()
+                .setEndpoint(API_ENDPOINT)
+                .build();
+
+        translator = new Translator(applicationContext.getResources());
+        service = adapter.create(IOpenWeatherService.class);
+    }
+
     @Override
     public Weather getCityWeather(String city) {
-        return service.getCityWeather(city);
+        if(translator == null) return service.getCityWeather(city, API_UNITS);
+        return translator.translate(service.getCityWeather(city, API_UNITS));
+    }
+
+    @Override
+    public void setTranslator(ITranslator<Weather> translator) {
+        this.translator = translator;
     }
 }
