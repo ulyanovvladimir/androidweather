@@ -26,76 +26,76 @@
     <string name="owm_310">легкий, моросящий дождь</string>
     <string name="owm_311">моросящий дождь</string>
     <string name="owm_312">сильный, моросящий дождь</string>
-    <string name="owm_313">ливень и...?</string>
-    <string name="owm_314">сильный ливен и...?</string>
+    <string name="owm_313">морось и дождь</string>
+    <string name="owm_314">проливной дождь и морось</string>
 
     //Rain
-    <string name="owm_500"></string>
-    <string name="owm_501"></string>
-    <string name="owm_502"></string>
-    <string name="owm_503"></string>
-    <string name="owm_504"></string>
-    <string name="owm_511"></string>
-    <string name="owm_520"></string>
-    <string name="owm_521"></string>
-    <string name="owm_522"></string>
-    <string name="owm_531"></string>
+    <string name="owm_500">небольшой дождь</string>
+    <string name="owm_501">небольшой дождь</string>
+    <string name="owm_502">сильно-интенсивный дождь</string>
+    <string name="owm_503">очень сильный дождь</string>
+    <string name="owm_504">экстремальный дождь</string>
+    <string name="owm_511">ледяной дождь</string>
+    <string name="owm_520">слабо-интенсивный ливень</string>
+    <string name="owm_521">ливень</string>
+    <string name="owm_522">сильно-интенсивный ливень</string>
+    <string name="owm_531">прерывистый ливень</string>
 
     //Snow
-    <string name="owm_600"></string>
-    <string name="owm_601"></string>
-    <string name="owm_602"></string>
-    <string name="owm_611"></string>
-    <string name="owm_612"></string>
-    <string name="owm_615"></string>
-    <string name="owm_616"></string>
-    <string name="owm_620"></string>
-    <string name="owm_621"></string>
-    <string name="owm_622"></string>
+    <string name="owm_600">небольшой снег</string>
+    <string name="owm_601">снег</string>
+    <string name="owm_602">сильный снегопад</string>
+    <string name="owm_611">мокрый снег</string>
+    <string name="owm_612">ливневый снег с дождем</string>
+    <string name="owm_615">небольшой дождь со снегом</string>
+    <string name="owm_616">снег с дождем</string>
+    <string name="owm_620">слабый снегопад</string>
+    <string name="owm_621">снегопад</string>
+    <string name="owm_622">сильный снегопад</string>
 
     //Atmosphere
     <string name="owm_701">дымка</string>
     <string name="owm_711">туман</string>
-    <string name="owm_721"></string>
-    <string name="owm_731"></string>
-    <string name="owm_741"></string>
-    <string name="owm_751"></string>
-    <string name="owm_761"></string>
-    <string name="owm_762"></string>
-    <string name="owm_771"></string>
-    <string name="owm_781"></string>
+    <string name="owm_721">дымка</string>
+    <string name="owm_731">пыльная буря</string>
+    <string name="owm_741">густой туман</string>
+    <string name="owm_751">песчаная буря</string>
+    <string name="owm_761">пыль</string>
+    <string name="owm_762">вулканический пепел</string>
+    <string name="owm_771">шквальный ветер</string>
+    <string name="owm_781">торнадо</string>
 
 
     //Clouds
-    <string name="owm_800"></string>
-    <string name="owm_801"></string>
-    <string name="owm_802"></string>
-    <string name="owm_803"></string>
-    <string name="owm_804"></string>
+    <string name="owm_800">ясно</string>
+    <string name="owm_801">малооблачно</string>
+    <string name="owm_802">переменная облачность</string>
+    <string name="owm_803">облачно с прояснениями</string>
+    <string name="owm_804">пасмурно</string>
 
     //Extreme
-    <string name="owm_900"></string>
-    <string name="owm_901"></string>
-    <string name="owm_902"></string>
-    <string name="owm_903"></string>
-    <string name="owm_904"></string>
-    <string name="owm_905"></string>
-    <string name="owm_906"></string>
+    <string name="owm_900">торнадо</string>
+    <string name="owm_901">тропический шторм</string>
+    <string name="owm_902">ураган</string>
+    <string name="owm_903">холодно</string>
+    <string name="owm_904">жарко</string>
+    <string name="owm_905">ветренно</string>
+    <string name="owm_906">град</string>
 
     //Additional
-    <string name="owm_951"></string>
-    <string name="owm_952"></string>
-    <string name="owm_953"></string>
-    <string name="owm_954"></string>
-    <string name="owm_955"></string>
-    <string name="owm_956"></string>
-    <string name="owm_957"></string>
-    <string name="owm_958"></string>
-    <string name="owm_959"></string>
-    <string name="owm_960"></string>
-    <string name="owm_961"></string>
-    <string name="owm_962"></string>
+    <string name="owm_951">штиль</string>
+    <string name="owm_952">легкий бриз</string>
+    <string name="owm_953">мягкий бриз</string>
+    <string name="owm_954">умеренный бриз</string>
+    <string name="owm_955">свежий бриз</string>
+    <string name="owm_956">сильный бриз</string>
+    <string name="owm_957">сильный ветер, почти шторм</string>
+    <string name="owm_958">буря</string>
+    <string name="owm_960">шторм</string>
+    <string name="owm_961">сильный шторм</string>
+    <string name="owm_962">ураган</string>
     <string name="owm_210">небольшая гроза</string>
     <string name="owm_211">гроза</string>
-    <string name="owm_321">ливневый, моросящий дождь ?</string>
+    <string name="owm_321">ливневый дождь и морось</string>
+    <string name="owm_959">сильная буря</string>
 </resources>
