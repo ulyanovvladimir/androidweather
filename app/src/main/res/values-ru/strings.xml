@@ -13,7 +13,7 @@
     <string name="owm_201">гроза с дождем</string>
     <string name="owm_202">гроза с сильным дождем</string>
     <string name="owm_212">сильная гроза</string>
-    <string name="owm_221"></string>
+    <string name="owm_221">кратковременная гроза</string>
     <string name="owm_230">гроза и легкий, моросящий дождь</string>
     <string name="owm_231">гроза и моросящий дождь</string>
     <string name="owm_232">гроза и сильный, моросящий дождь</string>
@@ -32,14 +32,14 @@
     //Rain
     <string name="owm_500">небольшой дождь</string>
     <string name="owm_501">небольшой дождь</string>
-    <string name="owm_502">сильно-интенсивный дождь</string>
+    <string name="owm_502">сильный дождь</string>
     <string name="owm_503">очень сильный дождь</string>
-    <string name="owm_504">экстремальный дождь</string>
+    <string name="owm_504">проливной дождь</string>
     <string name="owm_511">ледяной дождь</string>
-    <string name="owm_520">слабо-интенсивный ливень</string>
+    <string name="owm_520">слабый ливень</string>
     <string name="owm_521">ливень</string>
-    <string name="owm_522">сильно-интенсивный ливень</string>
-    <string name="owm_531">прерывистый ливень</string>
+    <string name="owm_522">сильный ливень</string>
+    <string name="owm_531">кратковременный ливень</string>
 
     //Snow
     <string name="owm_600">небольшой снег</string>
@@ -48,7 +48,7 @@
     <string name="owm_611">мокрый снег</string>
     <string name="owm_612">ливневый снег с дождем</string>
     <string name="owm_615">небольшой дождь со снегом</string>
-    <string name="owm_616">снег с дождем</string>
+    <string name="owm_616">дождь со снегом</string>
     <string name="owm_620">слабый снегопад</string>
     <string name="owm_621">снегопад</string>
     <string name="owm_622">сильный снегопад</string>
@@ -61,7 +61,7 @@
     <string name="owm_731">пыльная буря</string>
     <string name="owm_741">густой туман</string>
     <string name="owm_751">песчаная буря</string>
-    <string name="owm_761">пыль</string>
+    <string name="owm_761">пыльная буря</string>
     <string name="owm_762">вулканический пепел</string>
     <string name="owm_771">шквальный ветер</string>
     <string name="owm_781">торнадо</string>
