@@ -10,4 +10,5 @@ public class Weather {
     public List<WeatherDesc> weather;
     public Sys sys;
     public Wind wind;
+    public WeatherMainDesc main;
 }

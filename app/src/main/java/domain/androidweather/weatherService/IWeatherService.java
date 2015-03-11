@@ -8,4 +8,5 @@ public interface IWeatherService {
     Weather getCityWeather(String city);
 
     void setTranslator(ITranslator<Weather> translator);
+    void setWeatherImageResourceProvider(IWeatherImageResourceProvider provider);
 }
