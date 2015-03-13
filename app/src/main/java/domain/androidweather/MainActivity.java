@@ -63,7 +63,7 @@ public class MainActivity extends Activity{
     public void showWeather(Weather weather) {
         WeatherDesc currentWeather = weather.weather.get(0);
         ((ImageView) findViewById(R.id.main_weatherImage)).setImageResource(currentWeather.weatherImage);
-        ((TextView) findViewById(R.id.main_textViewTemperature)).setText(((int)weather.main.temp) + "°C");
+        ((TextView) findViewById(R.id.main_textViewTemperature)).setText((Math.round(weather.main.temp)) + "°C");
         ((TextView) findViewById(R.id.main_textViewWeatherDescription)).setText(currentWeather.description);
         ((TextView) findViewById(R.id.main_textViewWind)).setText(weather.wind.speed+"м/с");
     }

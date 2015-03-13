@@ -29,13 +29,19 @@ public class WeatherImageResourceProvider implements IWeatherImageResourceProvid
     }
 
     private int getResourceId(int weatherCode) {
-        int result = resources.getIdentifier("owm_" + weatherCode, "drawable", BuildConfig.APPLICATION_ID);
+        String code = weatherCode + "";
+
+        int result = resources.getIdentifier("owm_" + code, "drawable", BuildConfig.APPLICATION_ID);
+
+        if(result == 0) {
+            code = String.valueOf(weatherCode).charAt(0) + "00";
+            result = resources.getIdentifier("owm_" + code, "drawable", BuildConfig.APPLICATION_ID);
+        }
         if(!isDaylight()) {
-            int timeRes = resources.getIdentifier("owm_" + weatherCode+"n", "drawable", BuildConfig.APPLICATION_ID);
+            int timeRes = resources.getIdentifier("owm_" + code+"n", "drawable", BuildConfig.APPLICATION_ID);
             result = (timeRes != 0) ? timeRes : result;
         }
-        if(result == 0) result = resources.getIdentifier("owm_" + String.valueOf(weatherCode).charAt(0) + "00", "drawable", BuildConfig.APPLICATION_ID);
 
-        return result;
+        return result != 0 ? result : resources.getIdentifier("na", "drawable", BuildConfig.APPLICATION_ID);
     }
 }
