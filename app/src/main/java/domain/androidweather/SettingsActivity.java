@@ -1,5 +1,6 @@
 package domain.androidweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -22,13 +23,14 @@ public class SettingsActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        preferences = getPreferences(MODE_PRIVATE);
+        preferences = getSharedPreferences("AndroidWeather", MODE_PRIVATE);
 
         textField = (EditText)findViewById(R.id.settings_town);
 
-        if(preferences.contains("Town")) {
-            textField.setText(preferences.getString("Town", null));
+        if(preferences.contains("City")) {
+            textField.setText(preferences.getString("City", null));
         }
+
     }
 
 
@@ -56,12 +58,20 @@ public class SettingsActivity extends ActionBarActivity {
 
 
     public void onSaveButtonClick(View v) {
-        String townValue = textField.getText().toString();
-        saveSettings(new Pair<>("Town", townValue));
+        String city = textField.getText().toString();
+        saveSettings(new Pair<>("City", city));
         Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
+    }
+
+    public void onReturnButtonClick(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void saveSettings(Pair<String, String> settings) {
         preferences.edit().putString(settings.first, settings.second).apply();
     }
+
+
+
 }
