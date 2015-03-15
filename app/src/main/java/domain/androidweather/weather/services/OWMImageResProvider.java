@@ -1,4 +1,4 @@
-package domain.androidweather.weatherService;
+package domain.androidweather.weather.services;
 
 
 import android.content.res.Resources;
@@ -7,18 +7,15 @@ import android.util.Log;
 import java.util.Calendar;
 
 import domain.androidweather.BuildConfig;
+import domain.androidweather.weather.models.WeatherCondition;
+import domain.androidweather.weather.services.IWeatherResourceProvider;
 
-public class WeatherImageResourceProvider implements IWeatherImageResourceProvider {
+public class OWMImageResProvider implements IWeatherResourceProvider<WeatherCondition, Integer> {
 
     private Resources resources;
 
-    public WeatherImageResourceProvider(Resources resources) {
+    public OWMImageResProvider(Resources resources) {
         this.resources = resources;
-    }
-
-    @Override
-    public int getWeatherResource(int weatherCode) {
-        return getResourceId(weatherCode);
     }
 
     private boolean isDaylight() {
@@ -43,5 +40,10 @@ public class WeatherImageResourceProvider implements IWeatherImageResourceProvid
         }
 
         return result != 0 ? result : resources.getIdentifier("na", "drawable", BuildConfig.APPLICATION_ID);
+    }
+
+    @Override
+    public Integer getResource(WeatherCondition code) {
+        return getResourceId(code.id);
     }
 }

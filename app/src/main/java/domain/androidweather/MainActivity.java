@@ -3,17 +3,15 @@ package domain.androidweather;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.os.AsyncTask;
-import domain.androidweather.weatherService.models.Weather;
-import domain.androidweather.weatherService.IWeatherService;
-import domain.androidweather.weatherService.OpenWeatherService;
-import domain.androidweather.weatherService.models.WeatherDesc;
+import domain.androidweather.weather.models.current.CurrentWeather;
+import domain.androidweather.weather.services.IWeatherService;
+import domain.androidweather.weather.services.OpenWeatherService;
+import domain.androidweather.weather.models.WeatherCondition;
 
 import java.lang.Void;
 
@@ -56,12 +54,12 @@ public class MainActivity extends Activity{
     }
 
     public void loadWeather(String city) {
-        AsyncTask<String, Void, Weather> task = new WeatherServiceTask();
+        AsyncTask<String, Void, CurrentWeather> task = new WeatherServiceTask();
         task.execute(city);
     }
 
-    public void showWeather(Weather weather) {
-        WeatherDesc currentWeather = weather.weather.get(0);
+    public void showWeather(CurrentWeather weather) {
+        WeatherCondition currentWeather = weather.weather.get(0);
         ((ImageView) findViewById(R.id.main_weatherImage)).setImageResource(currentWeather.weatherImage);
         ((TextView) findViewById(R.id.main_textViewTemperature)).setText((Math.round(weather.main.temp)) + "°C");
         ((TextView) findViewById(R.id.main_textViewWeatherDescription)).setText(currentWeather.description);
@@ -69,7 +67,7 @@ public class MainActivity extends Activity{
     }
 
 
-    class WeatherServiceTask extends AsyncTask<String, Void, Weather> {
+    class WeatherServiceTask extends AsyncTask<String, Void, CurrentWeather> {
 
         private IWeatherService service;
 
@@ -79,19 +77,13 @@ public class MainActivity extends Activity{
         }
 
         @Override
-        protected Weather doInBackground(String... params) {
+        protected CurrentWeather doInBackground(String... params) {
             return service.getCityWeather(params[0]);
         }
 
         @Override
-        protected void onPostExecute(Weather result) {
+        protected void onPostExecute(CurrentWeather result) {
             showWeather(result);
-            /*textView.setText("City " + result.name);
-            for(WeatherDesc item : result.weather) {
-                textView1.setText(item.description);
-            }
-
-            textView2.setText("Wind speed: " + result.wind.speed + " m/s");*/
         }
     }
 }

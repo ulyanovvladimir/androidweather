@@ -59,9 +59,6 @@ public class SettingsActivity extends ActionBarActivity {
 
     public void onSaveButtonClick(View v) {
         String city = textField.getText().toString();
-        /*Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
-        intent.putExtra("City", townValue);
-        startActivity(intent);*/
         saveSettings(new Pair<>("City", city));
         Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
     }

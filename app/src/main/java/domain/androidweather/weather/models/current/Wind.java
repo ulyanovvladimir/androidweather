@@ -1,4 +1,4 @@
-package domain.androidweather.weatherService.models;
+package domain.androidweather.weather.models.current;
 
 public class Wind {
     public double speed;

@@ -1,7 +1,7 @@
-package domain.androidweather.weatherService.models;
+package domain.androidweather.weather.models;
 
 
-public class WeatherDesc {
+public class WeatherCondition {
     public int id;
     public String main;
     public String description;
