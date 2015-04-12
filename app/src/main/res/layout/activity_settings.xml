@@ -8,38 +8,70 @@
     android:background="#ff183d75">
 
 
-    <EditText
-        android:layout_width="wrap_content"
+    <TextView
         android:layout_height="wrap_content"
-        android:id="@+id/settings_town"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:maxWidth="250dp"
-        android:minWidth="250dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="63dp"
+        android:layout_gravity="center_horizontal"
+
+        android:textSize="28dp"
         android:textColor="#ffffff"
-        android:text="Irkutsk"
-        android:maxLines="1"
-        android:editable="true"
-        android:enabled="true" />
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Сохранить"
-        android:id="@+id/saveSettingsButton"
-        android:layout_marginTop="142dp"
+        android:text="Введите название города:"
+        android:id="@+id/text"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onSaveButtonClick"/>
-    <Button
-        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:background="@android:drawable/editbox_background"
         android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/settings_town"
+        android:height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/text"
+        android:text="Иркутск"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:textColor="#808080"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Сохранить"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#40ffffff"
+        android:id="@+id/saveSettingsButton"
+        android:height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/settings_town"
+        android:width="140dp"
+        android:onClick="onSaveButtonClick"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:text="Назад"
         android:id="@+id/returnButton"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onReturnButtonClick"/>
+        android:height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:width="140dp"
+        android:background="#40ffffff"
+        android:onClick="onReturnButtonClick"
+        android:layout_alignTop="@+id/saveSettingsButton"/>
 
 </RelativeLayout>
