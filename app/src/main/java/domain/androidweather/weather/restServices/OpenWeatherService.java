@@ -1,4 +1,4 @@
-package domain.androidweather.weather.services;
+package domain.androidweather.weather.restServices;
 
 
 import android.content.Context;
@@ -6,6 +6,11 @@ import domain.androidweather.weather.models.WeatherCondition;
 import domain.androidweather.weather.models.forecast.DailyWeather;
 import domain.androidweather.weather.models.forecast.Forecast;
 import domain.androidweather.weather.models.current.CurrentWeather;
+
+import domain.androidweather.weather.tools.*;
+import domain.androidweather.weather.tools.translation.ITranslatable;
+import domain.androidweather.weather.tools.translation.ITranslator;
+import domain.androidweather.weather.tools.translation.WeatherDescriptionTranslator;
 import retrofit.RestAdapter;
 
 public class OpenWeatherService implements IWeatherService, ITranslatable<WeatherCondition>, IWeatherResourceAdjuster<WeatherCondition, Integer> {

@@ -1,4 +1,4 @@
-package domain.androidweather.weather.services;
+package domain.androidweather.weather.restServices;
 
 
 import domain.androidweather.weather.models.forecast.Forecast;

@@ -1,4 +1,4 @@
-package domain.androidweather.weather.services;
+package domain.androidweather.weather.tools;
 
 
 import android.content.res.Resources;
@@ -8,7 +8,6 @@ import java.util.Calendar;
 
 import domain.androidweather.BuildConfig;
 import domain.androidweather.weather.models.WeatherCondition;
-import domain.androidweather.weather.services.IWeatherResourceProvider;
 
 public class OWMImageResProvider implements IWeatherResourceProvider<WeatherCondition, Integer> {
 
