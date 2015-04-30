@@ -24,6 +24,17 @@
         </activity>
 
         <service android:name=".weather.services.ProcessorService" android:exported="false"></service>
+
+        <receiver android:name=".Widget"
+            android:label="Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_metadata">
+
+            </meta-data>
+        </receiver>
     </application>
 
 </manifest>
