@@ -24,6 +24,7 @@ import domain.androidweather.weather.providers.WeatherServiceProvider;
 import domain.androidweather.weather.restServices.IWeatherService;
 import domain.androidweather.weather.restServices.OpenWeatherService;
 import domain.androidweather.weather.models.WeatherCondition;
+import domain.androidweather.weather.restServices.VolleyWeatherService;
 import domain.androidweather.weather.services.Extras;
 import domain.androidweather.weather.services.ProcessorService;
 import domain.androidweather.weather.services.WeatherServiceHelper;
@@ -81,6 +82,8 @@ public class MainActivity extends Activity{
                 startActivity(intent);
             }
         });
+    //    WeatherServiceTask task = new WeatherServiceTask();
+    //    task.execute(new String[]{"Иркутск"});
     }
 
     @Override
@@ -142,7 +145,7 @@ public class MainActivity extends Activity{
 
         @Override
         protected void onPreExecute() {
-            service = new OpenWeatherService(getApplicationContext());
+            service = new VolleyWeatherService(getApplicationContext());
         }
 
         @Override
@@ -152,7 +155,7 @@ public class MainActivity extends Activity{
 
         @Override
         protected void onPostExecute(CurrentWeather result) {
-            showWeather(result);
+            //Log.d("Gorod",result.name);
         }
     }
 }
